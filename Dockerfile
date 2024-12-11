@@ -21,10 +21,10 @@ RUN useradd -m -s /bin/bash linuxbrew && \
     echo 'brew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
 
 USER linuxbrew
+
 ENV NONINTERACTIVE=1
 RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-USER root
 ENV HOMEBREW_NO_ENV_HINTS=1
 ENV PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
 
