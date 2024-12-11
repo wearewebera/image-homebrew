@@ -1,4 +1,4 @@
-FROM webera/ubuntu:latest
+FROM webera/base
 
 ENV DEBIAN_FRONTEND=noninteractive
 
