@@ -17,7 +17,6 @@ RUN apt-get update \
 
 RUN localedef -i en_US -f UTF-8 en_US.UTF-8
 
-
 RUN useradd -m -s /bin/bash linuxbrew && \
     echo 'brew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
 
@@ -25,6 +24,5 @@ USER linuxbrew
 RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 USER root
-ENV HOMEBREW_NO_ENV_HINTS=1
 ENV PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
 
