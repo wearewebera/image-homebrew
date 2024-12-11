@@ -25,5 +25,6 @@ USER linuxbrew
 RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 USER root
+ENV HOMEBREW_NO_ENV_HINTS=1
 ENV PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
 
